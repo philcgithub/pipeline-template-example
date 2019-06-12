@@ -1,0 +1,5 @@
+version: 1
+type: pipeline-template-catalog
+
+name: standardMyOrgPipelineCatalog
+displayName: Pipeline Catalog of the standard pipelines at MyOrg, inc.
