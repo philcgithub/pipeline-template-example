@@ -3,7 +3,7 @@ stage('pre-pipeline-check') {
   echo 'License check'
 }
 
-def teamPipeline = readTrustedFile 'Jenkinsfile'
+def teamPipeline = readTrusted 'Jenkinsfile'
 evaluate teamPipeline
 
 stage('post-pipeline-check') {
