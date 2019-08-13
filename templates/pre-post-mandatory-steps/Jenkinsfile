@@ -3,8 +3,10 @@ stage('pre-pipeline-check') {
   echo 'License check'
 }
 
-def teamPipeline = readTrusted 'Jenkinsfile'
-evaluate teamPipeline
+node() {
+  def teamPipeline = readFile 'Jenkinsfile'
+  evaluate teamPipeline
+}
 
 stage('post-pipeline-check') {
   echo 'Running security scanner'
