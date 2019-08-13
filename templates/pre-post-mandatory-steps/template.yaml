@@ -3,3 +3,11 @@ type: pipeline-template
 
 name: Pre-Post mandatory steps Template
 description: Standard Pipeline with mandatory pre and post steps
+parameters:
+  - name: github_repo
+    type: string
+    displayName: GitHub HTTPS repo endpoint
+  - name: github_creds
+    displayName: GitHub Credentials ID
+    type: credentials
+    defaultValue: github-creds-example

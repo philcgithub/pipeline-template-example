@@ -5,10 +5,12 @@ stage('pre-pipeline-check') {
 
 node() {
   try {
+    git credentialsId: "${github_creds}" , url: "${github_repo}"
+    
     def teamPipeline = readFile 'Jenkinsfile'
     evaluate teamPipeline
   } catch (err) {
-    echo 'No Jenkinsfile detected, skipping Jenkinsfile execution'
+    echo 'Could not load Jenkinsfile, skipping Jenkinsfile execution'
   }
 }
 
