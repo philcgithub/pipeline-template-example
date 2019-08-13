@@ -1,0 +1,12 @@
+stage('pre-pipeline-check') {
+  echo 'Checking commit message for corporate standard template'
+  echo 'License check'
+}
+
+def teamPipeline = readTrustedFile 'Jenkinsfile'
+evaluate teamPipeline
+
+stage('post-pipeline-check') {
+  echo 'Running security scanner'
+  echo 'Checking necessary sign offs'
+}

@@ -1,0 +1,5 @@
+version: 1
+type: pipeline-template
+
+name: Pre-Post mandatory steps Template
+description: Standard Pipeline with mandatory pre and post steps
