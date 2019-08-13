@@ -7,7 +7,7 @@ node() {
   try {
     git credentialsId: "${github_creds}" , url: "https://github.com/${github_owner}/${github_repo}"
     sh 'ls -l'
-    def teamPipeline = readFile 'Jenkinsfile'
+    def teamPipeline = readFile "${jenksfile_name}"
     evaluate teamPipeline
   } catch (err) {
     echo "Caught: ${err}"

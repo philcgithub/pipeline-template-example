@@ -14,3 +14,7 @@ parameters:
     displayName: GitHub Credentials ID
     type: credentials
     defaultValue: github-creds-example
+  - name: jenksfile_name
+    displayName: Name of the Jenkinsfile to execute
+    type: string
+    defaultValue: Jenkinsfile
