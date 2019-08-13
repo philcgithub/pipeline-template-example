@@ -4,8 +4,12 @@ stage('pre-pipeline-check') {
 }
 
 node() {
-  def teamPipeline = readFile 'Jenkinsfile'
-  evaluate teamPipeline
+  try {
+    def teamPipeline = readFile 'Jenkinsfile'
+    evaluate teamPipeline
+  } catch (err) {
+    echo 'No Jenkinsfile detected, skipping Jenkinsfile execution'
+  }
 }
 
 stage('post-pipeline-check') {
