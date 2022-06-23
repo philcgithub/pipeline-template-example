@@ -1,0 +1,11 @@
+pipeline {
+    agent { label 'node' } 
+    stages {
+        stage('Build') { 
+            steps {
+                echo 'This is the build stage'
+                echo "User is ${NAME1} ${NAME2}"
+            }
+        }
+    }
+}
