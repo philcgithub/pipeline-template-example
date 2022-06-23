@@ -1,0 +1,12 @@
+version: 1
+type: pipeline-template
+
+name: Simple Pipeline Template Example
+description: Simple Pipeline Template Example
+parameters:
+  - name: NAME1
+    type: string
+    displayName: First name
+  - name: NAME2
+    type: string
+    displayName: Second name
